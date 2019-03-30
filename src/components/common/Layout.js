@@ -10,6 +10,8 @@ import config from '../../utils/siteConfig'
 // Styles
 import '../../styles/app.css'
 
+
+
 /**
 * Main layout component
 *
@@ -37,7 +39,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <header className="site-head">
                     <div className="container">
                         <div className="site-mast">
-                            <div className="site-mast-left">
+                            <div className="site-mast-row">
                                 <Link to="/">
                                     {site.logo ?
                                         <img className="site-logo" src={site.logo} alt={site.title} />
@@ -45,11 +47,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     }
                                 </Link>
                             </div>
-                            <div className="site-mast-right">
-                                { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
-                                { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
-                                <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
-                            </div>
+         
                         </div>
                         { isHome ?
                             <div className="site-banner">
