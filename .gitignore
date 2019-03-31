@@ -72,3 +72,12 @@ typings/
 .cache/
 public
 yarn-error.log
+
+# Ignore Macos
+.DS_Store
+
+# Ignore the API key files for Ghost
+ .ghost.json
+
+
+

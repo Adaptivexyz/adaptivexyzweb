@@ -56,13 +56,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </div> :
                             null}
                         <nav className="site-nav">
-                            <div className="site-nav-left">
+                            <div className="site-nav-center">
                                 {/* The navigation items as setup in Ghost */}
-                                <Navigation data={site.navigation} navClass="site-nav-item" />
+                                <Navigation data={site.navigation} navClass="site-nav-button" />
                             </div>
-                            <div className="site-nav-right">
-                                <Link className="site-nav-button" to="/about">About</Link>
-                            </div>
+
                         </nav>
                     </div>
                 </header>
