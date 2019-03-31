@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://development.adaptivexyz.com",
+    "contentApiKey": "ef7cd928dbe4d97838442ecf62"
+  },
+  "production": {
+    "apiUrl": "https://development.adaptivexyz.com",
+    "contentApiKey": "ef7cd928dbe4d97838442ecf62"
+  }
+}
