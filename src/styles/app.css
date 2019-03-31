@@ -672,11 +672,17 @@ h6 {
   position: relative;
 }
 
-
+.site-nav-center {
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .site-nav-item {
-    display: block;
-    margin-left: auto;
+    display: inline;
+    margin-left: 40px;
     margin-right: auto;
     color: #fff;
     opacity: 0.7;
@@ -723,7 +729,7 @@ h6 {
 .site-banner {
     max-width: 90%;
     margin: 0 auto;
-    padding: 2vw 0;
+    padding: 1vw 0;
     text-align: center;
 }
 
@@ -734,10 +740,11 @@ h6 {
     font-size: 4rem;
     line-height: 1.3em;
     color: rgb(53,64,80);
+    display: none;
 }
 
 .site-banner-desc {
-    margin: 20px 0 0 0;
+    margin: 0 0 20px 0;
     padding: 0;
     font-size: 3rem;
     line-height: 1.3em;
@@ -747,26 +754,22 @@ h6 {
 }
 
 .site-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 15px 0 0 0;
+    display: block;
+    position: relative;
 }
 
-.site-nav-left {
-    margin: 0 20px 0 -10px;
+.site-nav-center {
+    margin: 0 20px 20px -10px;
 }
 
-.site-nav-right {
-    margin: 0 -10px 0 20px;
-}
 
 .site-nav-button {
     display: inline-block;
     padding: 5px 10px;
+    margin: 10px 20px 10px 20px;
     border: #fff 1px solid;
-    color: #fff;
-    font-size: 1.3rem;
+    color: rgb(53,64,80);
+    font-size: 2rem;
     line-height: 1em;
     border-radius: var(--radius);
     opacity: 0.7;
@@ -774,6 +777,7 @@ h6 {
 
 .site-nav-button:hover {
     text-decoration: none;
+    color: #fff;
 }
 
 /* Main
