@@ -7,6 +7,7 @@ This site is built with the following JAMstack components:
 - Firebase - static web hosting with CDN
 - REACT - front end progressive web application
 - Graphql - database
+- Circle CI
 
 
 ## Instructions
@@ -56,5 +57,9 @@ gatsby develop
 You site should be served at:
 
 ```localhost:8000```
+
+## Thanks
+
+[Jonathan Cary's blog](https://medium.com/@jonathan_cary/deploying-a-gatsby-site-to-firebase-with-circleci-d2dae648cfc9)
 
 
