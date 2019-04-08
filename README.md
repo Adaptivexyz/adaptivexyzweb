@@ -12,6 +12,10 @@ This site is built with the following JAMstack components:
 
 ## Instructions
 
+Prerequisites:
+Install the Ghost CLI
+```npm install ghost-cli@latest -g```
+
 To run locally you can clone the project from 
 ```
 git clone https://github.com/Adaptivexyz/adaptivexyzweb.git
