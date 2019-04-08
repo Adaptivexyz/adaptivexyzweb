@@ -15,6 +15,7 @@ This site is built with the following JAMstack components:
 Prerequisites:
 Install the Ghost CLI
 ```npm install ghost-cli@latest -g```
+```npm install -g gatsby-cli```
 
 To run locally you can clone the project from 
 ```
