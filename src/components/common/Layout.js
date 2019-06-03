@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
+import { toggle } from '.'
 import { Navigation } from '.'
 import config from '../../utils/siteConfig'
 
 // Styles
 import '../../styles/app.css'
 
-
+  
 
 /**
 * Main layout component
@@ -25,8 +25,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
     const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
 
+
+
     return (
-    <>
+      <React.Fragment>
         <Helmet>
             <html lang={site.lang} />
             <body className={bodyClass} />
@@ -55,15 +57,28 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <p className="site-banner-desc">{site.description}</p>
                             </div> :
                             null}
-                        <nav className="site-nav">
-                            <div className="site-nav-center">
-                                {/* The navigation items as setup in Ghost */}
-                                <Navigation data={site.navigation} navClass="site-nav-button" />
+     
+                    <nav className="site-nav">
+                        <div className="navWide">
+                            <div className="wideDiv">
+                                 {/* The navigation items as setup in Ghost */}
+                                 <Navigation data={site.navigation} navClass="site-nav-button" />
                             </div>
-
-                        </nav>
+                        </div>
+                        <div className="navNarrow">
+                            <i className="fa fa-bars fa-2x" onClick={burgerToggle}></i>
+                            <div className="narrowLinks">
+                                {/* The navigation items as setup in Ghost */}
+                                <Navigation data={site.navigation} navClass="site-nav-button onClick={burgerToggle}" />
+                            </div>
+                        </div>
+                    </nav>
                     </div>
-                </header>
+                 </header>
+
+
+
+
 
                 <main className="site-main">
                     {/* All the main content gets inserted here, index.js, post.js */}
@@ -87,10 +102,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
             </div>
         </div>
+    </React.Fragment>
 
-    </>
     )
 }
+
+
+
 
 DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,

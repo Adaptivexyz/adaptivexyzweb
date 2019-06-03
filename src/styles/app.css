@@ -672,31 +672,31 @@ h6 {
   position: relative;
 }
 
-.site-nav-center {
+/*.site-nav-center {
   float: left;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}*/
 
-.site-nav-item {
+/*.site-nav-item {
     display: inline;
     margin-left: 40px;
     margin-right: auto;
     color: #fff;
     opacity: 0.7;
-}
+}*/
 
-.site-nav-item:hover {
+/*.site-nav-item:hover {
     text-decoration: none;
     opacity: 1;
-}
+}*/
 
-.site-nav-icon {
+/*.site-nav-icon {
     height: 25px;
     margin: -5px 0 0;
-}
+}*/
 
 .site-logo {
     display: block;
@@ -753,17 +753,17 @@ h6 {
     font-style: italic;
 }
 
-.site-nav {
+/*.site-nav {
     display: block;
     position: relative;
-}
+}*/
 
-.site-nav-center {
+/*.site-nav-center {
     margin: 0 20px 20px -10px;
-}
+}*/
 
 
-.site-nav-button {
+/*.site-nav-button {
     display: inline-block;
     padding: 5px 10px;
     margin: 10px 20px 10px 20px;
@@ -773,12 +773,12 @@ h6 {
     line-height: 1em;
     border-radius: var(--radius);
     opacity: 0.7;
-}
+}*/
 
-.site-nav-button:hover {
+/*.site-nav-button:hover {
     text-decoration: none;
     color: #fff;
-}
+}*/
 
 /* Main
 /* ---------------------------------------------------------- */
@@ -1037,4 +1037,55 @@ h6 {
 
 .site-foot-nav-right a:last-child {
     padding-right: 0;
+}
+
+/* Navigation
+/* ---------------------------------------------------------- */
+nav.site-nav {
+  background-color: gray;
+  overflow: hidden;
+  padding: 1em;
+  border-bottom: 1px solid #000;
+}
+nav.site-nav a {
+  color: white;
+}
+nav.site-nav a:visited {
+  color: yellow;
+}
+nav.site-nav .navWide {
+  display: none;
+  margin: 0 auto;
+}
+nav .navWide .wideDiv {
+  text-align: center;
+}
+nav .navWide .wideDiv a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2em;
+}
+nav .navNarrow i {
+  float: left;
+  cursor: pointer;
+  color: #fff;
+}
+nav .navNarrow .narrowLinks {
+  display: none;
+}
+nav .navNarrow .narrowLinks a {
+  text-decoration: none;
+  display: block;
+  float: left;
+  clear: left;
+  padding: 0.5em 0;
+}
+
+@media (min-width: 480px) {
+  nav .navWide {
+    display: block;
+  }
+  nav .navNarrow {
+    display: none;
+  }
 }
